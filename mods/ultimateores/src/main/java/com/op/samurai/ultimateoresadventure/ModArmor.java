@@ -24,7 +24,14 @@ public class ModArmor {
 
     private static ArmorMaterial material(String name, int durability, int defense, int toughness, int knockback, int enchant) {
         return new ArmorMaterial() {
-            public int getDurabilityForType(ArmorItem.Type type) { return durability * type.getDurabilityMultiplier(); }
+            public int getDurabilityForType(ArmorItem.Type type) {
+    return durability * switch (type) {
+        case HELMET -> 11;
+        case CHESTPLATE -> 16;
+        case LEGGINGS -> 15;
+        case BOOTS -> 13;
+    };
+}
             public int getDefenseForType(ArmorItem.Type type) { return defense; }
             public int getEnchantmentValue() { return enchant; }
             public net.minecraft.sounds.SoundEvent getEquipSound() { return net.minecraft.sounds.SoundEvents.ARMOR_EQUIP_NETHERITE; }
