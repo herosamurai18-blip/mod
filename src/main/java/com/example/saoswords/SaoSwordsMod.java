@@ -55,17 +55,17 @@ public class SaoSwordsMod {
     // SwordItem(tier, extraDamage, attackSpeedModifier, properties)
     // Elucidator: heavy hitter (~9 damage)
     public static final RegistryObject<Item> ELUCIDATOR = ITEMS.register("elucidator",
-            () -> new SwordItem(BLACK_TIER, 4, -2.4F,
+            () -> new SwordItem(BLACK_TIER, 127, -2.4F,
                     new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
 
     // Dark Repulser: slightly weaker but faster (~8 damage, fast swing)
     public static final RegistryObject<Item> DARK_REPULSER = ITEMS.register("dark_repulser",
-            () -> new SwordItem(TEAL_TIER, 3, -1.8F,
+            () -> new SwordItem(TEAL_TIER, 127, -1.8F,
                     new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
 
     // Excalibur: strongest, gives you Regeneration for 3 seconds when you hit something
     public static final RegistryObject<Item> EXCALIBUR = ITEMS.register("excalibur",
-            () -> new SwordItem(GOLD_TIER, 4, -2.4F,
+            () -> new SwordItem(GOLD_TIER, 126, -2.4F,
                     new Item.Properties().fireResistant().rarity(Rarity.EPIC)) {
                 @Override
                 public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
